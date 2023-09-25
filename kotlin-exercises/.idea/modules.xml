@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/kotlin-exercises.iml" filepath="$PROJECT_DIR$/.idea/kotlin-exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labor-01/labor-01.iml" filepath="$PROJECT_DIR$/labor-01/labor-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labor-02/labor-02.iml" filepath="$PROJECT_DIR$/labor-02/labor-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labor-03/labor-03.iml" filepath="$PROJECT_DIR$/labor-03/labor-03.iml" />
+    </modules>
+  </component>
+</project>
