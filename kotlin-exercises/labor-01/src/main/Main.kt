@@ -1,7 +1,6 @@
 package main
 
-import java.util.Base64
-import java.util.Random
+import java.util.*
 
 fun main() {
 //1. ex.
@@ -207,4 +206,19 @@ fun areAllNumbersEven(array: Array<Int>): Boolean{
 //e) Calculate the average of generated numbers and print it using forEach!
 fun avgArray(array: Array<Int>): Double {
     return array.sumOf { it }.toDouble() / array.size
+}
+
+//extra Given an array of strings, group the anagrams together
+fun groupAnagrams(words: Array<String>): List<List<String>>{
+    val anagramGroups = mutableMapOf<String, MutableList<String>>()
+    for (word in words) {
+        val sortedWord = word.toCharArray().sorted().joinToString("")
+        val lowerCaseWord = word.lowercase()
+        if (!anagramGroups.containsKey(sortedWord)) {
+            anagramGroups[sortedWord] = mutableListOf()
+        }
+        anagramGroups[sortedWord]?.add(lowerCaseWord)
+    }
+
+    return anagramGroups.values.toList()
 }
