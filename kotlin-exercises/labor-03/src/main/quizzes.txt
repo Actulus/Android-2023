@@ -1,0 +1,69 @@
+What is Kotlin's primary use case?
+Web development
+Mobile app development
+Data science
+Game development
+2
+
+Which of the following is true about Kotlin's null safety?
+All variables in Kotlin can be null by default.
+Kotlin doesn't allow null values at all.
+Kotlin distinguishes between nullable and non-nullable types.
+Null safety is not a concept in Kotlin.
+3
+
+In Kotlin, which keyword is used to define a class?
+class
+Class
+struct
+Type
+1
+
+What is the main advantage of using Kotlin's data classes?
+They can extend multiple classes.
+They generate useful methods like `equals`, `hashCode`, and `toString`.
+They are only used for working with databases.
+They cannot have properties.
+2
+
+Which of the following is the correct way to declare a read-only (immutable) property in Kotlin?
+val property: Int
+readonly property: Int
+var property: Int
+immutable property: Int
+1
+
+What is the purpose of Kotlin's `when` expression?
+It is used to define loops in Kotlin.
+It is used to create anonymous functions.
+It is used for pattern matching and branching based on values.
+It is used to define extension functions.
+3
+
+What is the Kotlin standard library function for filtering elements in a collection?
+map
+forEach
+filter
+reduce
+3
+
+Which Kotlin feature is used for defining an extension function on a class without modifying its source code?
+Inheritance
+Polymorphism
+Extension functions
+Overriding
+3
+
+What is the default visibility modifier in Kotlin for a class, function, or property?
+public
+private
+protected
+internal
+4
+
+In Kotlin, what is the purpose of the `init` block in a class?
+It is used for primary constructor initialization.
+It is used to define extension functions.
+It is used for property initialization.
+It is used for secondary constructor initialization.
+1

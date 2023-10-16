@@ -2,5 +2,5 @@ package main
 
 fun main(args: Array<String>) {
     val itemController = ItemController(ItemService(ItemRepository()))
-    itemController.quiz(5)
+    itemController.quiz(10)
 }

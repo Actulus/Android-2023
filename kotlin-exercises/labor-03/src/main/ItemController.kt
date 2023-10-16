@@ -11,13 +11,13 @@ class ItemController(val itemService: ItemService ) {
         val items = itemService.selectRandomItems(nrOfQuestions)
         var score = 0
         for (item in items) {
-            println("Question: ${item.question}")
+            println("${items.indexOf(item)+1}. Question: ${item.question}")
             for (i in 0 until item.answers.size) {
                 println("${i+1}. ${item.answers[i]}")
             }
             println("Enter your answer (1-${item.answers.size}): " )
             val response = readln().toInt()
-            if(response < 0 || response > item.answers.size) {
+            if(response < 1 || response > item.answers.size) {
                 println("Invalid response")
             }
             else if (response == item.correct) {
