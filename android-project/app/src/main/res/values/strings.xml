@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RecipesApp</string>
+    <string name="start_button">Start</string>
+    <string name="user_input_hint">Enter your name</string>
 </resources>
