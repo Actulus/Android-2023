@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val result = intent.getStringExtra("message")
         Log.d(TAG, "Message received: $result")
 
-        binding.userInputTextView.text = result
+
     }
 
     override fun onStart() {

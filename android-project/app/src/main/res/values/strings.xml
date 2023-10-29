@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">RecipesApp</string>
+    <string name="app_name">Culinary Enchantments</string>
     <string name="start_button">Start</string>
     <string name="user_input_hint">Enter your name</string>
+    <string name="logo_alt_text">Application logo presenting a witch cooking</string>
+    <string name="app_slogen">Where Magic Meets the Plate</string>
+
 </resources>
