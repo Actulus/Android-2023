@@ -4,5 +4,9 @@
     <string name="user_input_hint">Enter your name</string>
     <string name="logo_alt_text">Application logo presenting a witch cooking</string>
     <string name="app_slogen">Where Magic Meets the Plate</string>
-
+    <string name="get_started_button">Get Started</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dashboardFragment">Home</string>
+    <string name="profileFragment">Profile</string>
+    <string name="recipesFragment">Recipes</string>
 </resources>

@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="magic_purple">#480773</color>
+    <color name="pink_purple">#FFF600B8</color>
+    <color name="vibrant_yellow">#FFFEFE00</color>
+    <color name="dark_purple">#FF260C39</color>
+    <color name="vibrant_green">#FF0DFE00</color>
 </resources>

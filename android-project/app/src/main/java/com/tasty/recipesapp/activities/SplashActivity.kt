@@ -1,4 +1,4 @@
-package com.tasty.recipesapp
+package com.tasty.recipesapp.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.HandlerThread
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.tasty.recipesapp.R
 import com.tasty.recipesapp.databinding.ActivitySplashBinding
 
 class SplashActivity: AppCompatActivity() {
