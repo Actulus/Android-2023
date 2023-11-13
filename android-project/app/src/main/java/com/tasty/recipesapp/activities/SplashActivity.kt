@@ -25,12 +25,11 @@ class SplashActivity: AppCompatActivity() {
         val handler = Handler(handlerThread.looper)
         val SPLASH_TIME_OUT = 2000L
         handler.postDelayed({
-// Navigate to MainActivity after the delay
+        // Navigate to MainActivity after the delay
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)
             finish() },
             SPLASH_TIME_OUT)
-
     }
 
     override fun onStart() {

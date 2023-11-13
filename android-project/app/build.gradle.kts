@@ -39,11 +39,11 @@ android {
 }
 
 dependencies {
-    implementation("androidx.fragment:fragment:1.6.1")
+    implementation("androidx.fragment:fragment:1.6.2")
     val nav_version = "2.7.4"
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.8.0")
+    implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     testImplementation("junit:junit:4.13.2")
@@ -56,5 +56,7 @@ dependencies {
     implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
     // Testing Navigation
     androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
-    implementation("com.google.android.material:material:1.11.0-alpha01")
+    implementation("com.google.android.material:material:1.11.0-beta01")
+    // importing gson
+    implementation("com.google.code.gson:gson:2.10.1")
 }
