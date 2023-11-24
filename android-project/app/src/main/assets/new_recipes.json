@@ -1,5 +1,5 @@
 {
-  "count": 5,
+  "count": 9,
   "results": [
     {
       "id": 1,
@@ -107,6 +107,119 @@
         "Bake for 10-12 minutes or until edges are golden brown. Cool on wire racks."
       ],
       "imageUrl": "https://picsum.photos/200/300"
+    },
+    {"id": 6,
+      "name": "Chicken Alfredo Pasta",
+      "description": "Creamy Alfredo pasta with tender chicken pieces.",
+      "ingredients": [
+        {"name": "Fettuccine pasta", "quantity": 8.0, "unit": "oz"},
+        {"name": "Chicken breasts", "quantity": 1.0, "unit": "lb, cut into strips"},
+        {"name": "Olive oil", "quantity": 2.0, "unit": "tablespoons"},
+        {"name": "Garlic", "quantity": 4.0, "unit": "cloves, minced"},
+        {"name": "Heavy cream", "quantity": 1.0, "unit": "cup"},
+        {"name": "Parmesan cheese", "quantity": 1.0, "unit": "cup, grated"},
+        {"name": "Salt", "quantity": null, "unit": "to taste"},
+        {"name": "Black pepper", "quantity": null, "unit": "to taste"},
+        {"name": "Fresh parsley", "quantity": null, "unit": "for garnish"}
+      ],
+      "instructions": [
+        "Cook pasta according to package instructions. Drain and set aside.",
+        "In a skillet, heat olive oil. Cook chicken until browned.",
+        "Add minced garlic and sauté for 1-2 minutes.",
+        "Pour in heavy cream and Parmesan. Stir until smooth.",
+        "Season with salt and black pepper. Add pasta and toss until coated.",
+        "Garnish with fresh parsley and serve hot."
+      ],
+      "imageUrl": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 7,
+      "name": "Grilled Chicken Caesar Salad",
+      "description": "A classic Caesar salad with grilled chicken for a hearty meal.",
+      "ingredients": [
+        {
+          "name": "Chicken breasts",
+          "quantity": 2.0,
+          "unit": "boneless, skinless"
+        },
+        {
+          "name": "Romaine lettuce",
+          "quantity": 1.0,
+          "unit": "head, chopped"
+        },
+        {
+          "name": "Croutons",
+          "quantity": 1.0,
+          "unit": "cup"
+        },
+        {
+          "name": "Parmesan cheese",
+          "quantity": 0.5,
+          "unit": "cup, grated"
+        },
+        {
+          "name": "Caesar dressing",
+          "quantity": 0.5,
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        "Preheat the grill to medium-high heat.",
+        "Season chicken breasts with salt and pepper. Grill until fully cooked.",
+        "Slice grilled chicken into strips.",
+        "In a large bowl, combine chopped romaine lettuce, croutons, and Parmesan cheese.",
+        "Add grilled chicken strips and toss with Caesar dressing.",
+        "Serve immediately for a delicious and satisfying salad."
+      ],
+      "imageUrl": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 8,
+      "name": "Spaghetti Bolognese",
+      "description": "Classic Italian spaghetti with rich and flavorful Bolognese sauce.",
+      "ingredients": [
+        {"name": "Spaghetti", "quantity": 8.0, "unit": "oz"},
+        {"name": "Ground beef", "quantity": 1.0, "unit": "lb"},
+        {"name": "Onion", "quantity": 1.0, "unit": "medium, finely chopped"},
+        {"name": "Garlic", "quantity": 2.0, "unit": "cloves, minced"},
+        {"name": "Tomato sauce", "quantity": 1.5, "unit": "cups"},
+        {"name": "Red wine", "quantity": 0.5, "unit": "cup"},
+        {"name": "Dried oregano", "quantity": 1.0, "unit": "teaspoon"},
+        {"name": "Salt and black pepper", "quantity": null, "unit": "to taste"}
+      ],
+      "instructions": [
+        "Cook spaghetti according to package instructions. Drain and set aside.",
+        "In a skillet, brown ground beef over medium heat. Drain excess fat.",
+        "Add chopped onion and minced garlic. Cook until onion is translucent.",
+        "Pour in tomato sauce, red wine, dried oregano, salt, and black pepper. Simmer for 15-20 minutes.",
+        "Serve Bolognese sauce over cooked spaghetti. Enjoy this classic Italian dish!"
+      ],
+      "imageUrl": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 9,
+      "name": "Greek Salad with Lemon Vinaigrette",
+      "description": "A refreshing Greek salad with a zesty lemon dressing.",
+      "ingredients": [
+        {"name": "Cucumbers", "quantity": 2.0, "unit": "medium, diced"},
+        {"name": "Tomatoes", "quantity": 2.0, "unit": "medium, diced"},
+        {"name": "Red bell pepper", "quantity": 1.0, "unit": "diced"},
+        {"name": "Red onion", "quantity": 0.5, "unit": "cup, thinly sliced"},
+        {"name": "Kalamata olives", "quantity": 0.5, "unit": "cup"},
+        {"name": "Feta cheese", "quantity": 0.5, "unit": "cup, crumbled"},
+        {"name": "Fresh oregano", "quantity": 1.0, "unit": "tablespoon, chopped"},
+        {"name": "Lemon juice", "quantity": 2.0, "unit": "tablespoons"},
+        {"name": "Olive oil", "quantity": 3.0, "unit": "tablespoons"},
+        {"name": "Salt and black pepper", "quantity": null, "unit": "to taste"}
+      ],
+      "instructions": [
+        "In a large bowl, combine diced cucumbers, tomatoes, red bell pepper, red onion, olives, and feta cheese.",
+        "In a small bowl, whisk together lemon juice, olive oil, salt, and black pepper to make the vinaigrette.",
+        "Pour the vinaigrette over the salad and toss until well coated.",
+        "Sprinkle fresh oregano on top. Serve immediately for a taste of the Mediterranean."
+      ],
+      "imageUrl": "https://picsum.photos/200/300"
     }
+
   ]
 }
