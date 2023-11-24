@@ -7,4 +7,6 @@
     <color name="vibrant_yellow">#FFFEFE00</color>
     <color name="dark_purple">#FF260C39</color>
     <color name="vibrant_green">#FF0DFE00</color>
+    <color name="silver_gray">#404040</color>
+    <color name="light_gray">#F3EEEA</color>
 </resources>
