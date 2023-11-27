@@ -3,12 +3,20 @@ package com.tasty.recipesapp.ui.recipe.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import com.tasty.recipesapp.R
 import com.tasty.recipesapp.databinding.RecipeListItemBinding
 import com.tasty.recipesapp.repository.recipe.model.RecipeModel
 
 
-class RecipesListAdapter(private val recipesList: List<RecipeModel>, private val context: Context) :
+class RecipesListAdapter(
+    private val recipesList: List<RecipeModel>,
+    private val context: Context,
+    /*private val onItemClickListener: (RecipeModel) -> Unit */) :
     RecyclerView.Adapter<RecipesListAdapter.RecipeItemViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -34,9 +42,13 @@ class RecipesListAdapter(private val recipesList: List<RecipeModel>, private val
         fun bind(recipe: RecipeModel) {
             binding.recipeName.text = recipe.name
             binding.recipeDescription.text = recipe.description
-            binding.recipeImageUrl.text = recipe.imageUrl
+            // bind image with coil
+            recipe.imageUrl?.let {
+                binding.recipeImage.load(it) {
+                    crossfade(true) // Optional: Enable crossfade for smooth image transitions
+                    placeholder(R.drawable.ic_launcher_background) // Optional: Set a placeholder image while loading
+                }
+            }
         }
     }
-
-
 }

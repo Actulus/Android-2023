@@ -20,7 +20,7 @@
         "Heat a griddle or non-stick pan. Melt butter and ladle batter onto the griddle.",
         "Cook until bubbles form on the surface, then flip and cook the other side until golden brown."
       ],
-      "imageUrl": "https://picsum.photos/200/300"
+      "imageUrl": "https://i.pinimg.com/564x/29/84/2d/29842d65620c3d3ab14bc81eea9fe3ea.jpg"
     },
     {
       "id": 2,
@@ -42,7 +42,7 @@
         "Add vegetables and continue stir-frying until they are tender-crisp.",
         "Pour in soy sauce and toss everything together. Serve hot."
       ],
-      "imageUrl": "https://picsum.photos/200/300"
+      "imageUrl": "https://i.pinimg.com/564x/10/16/4f/10164fc93a89769ca8408d4455443c8d.jpg"
     },
     {
       "id": 3,
@@ -60,7 +60,7 @@
         "Blend until smooth and creamy.",
         "Pour into a glass and enjoy the tropical goodness."
       ],
-      "imageUrl": "https://picsum.photos/200/300"
+      "imageUrl": "https://i.pinimg.com/736x/8b/f4/3a/8bf43ae9833cace8a625cc912d1dd0ff.jpg"
     },
     {
       "id": 4,
@@ -81,7 +81,7 @@
         "Drizzle with olive oil and balsamic glaze. Season with salt and black pepper.",
         "Serve immediately for a refreshing salad."
       ],
-      "imageUrl": "https://picsum.photos/200/300"
+      "imageUrl": "https://i.pinimg.com/736x/f6/5b/5d/f65b5d12e8044a2f4bce99869d5f2dc5.jpg"
     },
     {
       "id": 5,
@@ -106,7 +106,7 @@
         "Fold in chocolate chips. Drop rounded tablespoons onto ungreased baking sheets.",
         "Bake for 10-12 minutes or until edges are golden brown. Cool on wire racks."
       ],
-      "imageUrl": "https://picsum.photos/200/300"
+      "imageUrl": "https://i.pinimg.com/564x/d0/7c/d3/d07cd352b34a949704aca0902c6e8d01.jpg"
     },
     {"id": 6,
       "name": "Chicken Alfredo Pasta",
@@ -130,7 +130,7 @@
         "Season with salt and black pepper. Add pasta and toss until coated.",
         "Garnish with fresh parsley and serve hot."
       ],
-      "imageUrl": "https://picsum.photos/200/300"
+      "imageUrl": "https://i.pinimg.com/736x/de/e8/df/dee8dfb89f5c84bb7b82685ce3407945.jpg"
     },
     {
       "id": 7,
@@ -171,7 +171,7 @@
         "Add grilled chicken strips and toss with Caesar dressing.",
         "Serve immediately for a delicious and satisfying salad."
       ],
-      "imageUrl": "https://picsum.photos/200/300"
+      "imageUrl": "https://i.pinimg.com/564x/07/b3/fa/07b3fa5f80454a92f323140a4504ad23.jpg"
     },
     {
       "id": 8,
@@ -194,7 +194,7 @@
         "Pour in tomato sauce, red wine, dried oregano, salt, and black pepper. Simmer for 15-20 minutes.",
         "Serve Bolognese sauce over cooked spaghetti. Enjoy this classic Italian dish!"
       ],
-      "imageUrl": "https://picsum.photos/200/300"
+      "imageUrl": "https://i.pinimg.com/564x/00/22/b9/0022b9ae4cff08e1cdfd6eecc739107a.jpg"
     },
     {
       "id": 9,
@@ -218,7 +218,7 @@
         "Pour the vinaigrette over the salad and toss until well coated.",
         "Sprinkle fresh oregano on top. Serve immediately for a taste of the Mediterranean."
       ],
-      "imageUrl": "https://picsum.photos/200/300"
+      "imageUrl": "https://i.pinimg.com/564x/07/2d/ac/072dacc8b64d048d4fb80bdeb3cbff25.jpg"
     }
 
   ]

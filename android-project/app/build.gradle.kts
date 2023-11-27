@@ -59,4 +59,7 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0-beta01")
     // importing gson
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    //coil
+    implementation("io.coil-kt:coil:2.5.0")
 }

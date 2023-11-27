@@ -9,10 +9,12 @@ import com.tasty.recipesapp.repository.recipe.model.RecipeDTO
 import com.tasty.recipesapp.repository.recipe.model.RecipeModel
 import com.tasty.recipesapp.repository.recipe.model.RecipesDTO
 import com.tasty.recipesapp.repository.recipe.model.toModel
+import com.tasty.recipesapp.ui.recipe.viewmodel.RecipeListViewModel
 import java.io.IOException
 
 object RecipeRepository {
     private val TAG: String? = RecipeRepository::class.java.canonicalName
+    /*private var recipeList = RecipeListViewModel*/
 
     fun getRecipes(context: Context): List<RecipeModel> {
         lateinit var jsonString: String
