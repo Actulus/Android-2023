@@ -1,6 +1,7 @@
 package com.tasty.recipesapp.ui.recipe.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.AdapterView.OnItemClickListener
@@ -14,9 +15,9 @@ import com.tasty.recipesapp.repository.recipe.model.RecipeModel
 
 
 class RecipesListAdapter(
-    private val recipesList: List<RecipeModel>,
+    private var recipesList: List<RecipeModel>,
     private val context: Context,
-    /*private val onItemClickListener: (RecipeModel) -> Unit */) :
+    private val onItemClickListener: (RecipeModel) -> Unit ) :
     RecyclerView.Adapter<RecipesListAdapter.RecipeItemViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -29,7 +30,6 @@ class RecipesListAdapter(
 
     override fun onBindViewHolder(holder: RecipeItemViewHolder, position: Int) {
         val currentRecipe: RecipeModel = recipesList[position]
-
         holder.bind(currentRecipe)
     }
 
@@ -39,14 +39,25 @@ class RecipesListAdapter(
 
     inner class RecipeItemViewHolder(private val binding: RecipeListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.root.setOnClickListener {
+                Log.d("RecipesListAdapter", "RecipeItemViewHolder: Clicked on item")
+                Log.d("RecipesListAdapter", "RecipeItemViewHolder: adapterPosition: $adapterPosition")
+                onItemClickListener(recipesList[adapterPosition])
+            }
+        }
+
         fun bind(recipe: RecipeModel) {
-            binding.recipeName.text = recipe.name
-            binding.recipeDescription.text = recipe.description
-            // bind image with coil
-            recipe.imageUrl?.let {
-                binding.recipeImage.load(it) {
-                    crossfade(true) // Optional: Enable crossfade for smooth image transitions
-                    placeholder(R.drawable.ic_launcher_background) // Optional: Set a placeholder image while loading
+            with(binding) {
+                Log.d("RecipesListAdapter", "Recipe: $recipe")
+                recipeName.text = recipe.name
+                recipeDescription.text = recipe.description
+                // bind image with coil
+                recipe.imageUrl?.let {
+                    recipeImage.load(it) {
+                        crossfade(true) // Optional: Enable crossfade for smooth image transitions
+                        placeholder(R.drawable.ic_launcher_background) // Optional: Set a placeholder image while loading
+                    }
                 }
             }
         }

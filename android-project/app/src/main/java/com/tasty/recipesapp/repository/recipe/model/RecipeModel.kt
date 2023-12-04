@@ -1,7 +1,7 @@
 package com.tasty.recipesapp.repository.recipe.model
 
 data class RecipeModel (
-    val id: Int,
+    val recipeID: Long,
     val name: String,
     val description: String,
     val ingredients: List<IngredientModel>,

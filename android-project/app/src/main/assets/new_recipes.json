@@ -2,7 +2,7 @@
   "count": 9,
   "results": [
     {
-      "id": 1,
+      "recipeID": 1,
       "name": "Classic Pancakes",
       "description": "Fluffy pancakes for a delightful breakfast",
       "ingredients": [
@@ -23,7 +23,7 @@
       "imageUrl": "https://i.pinimg.com/564x/29/84/2d/29842d65620c3d3ab14bc81eea9fe3ea.jpg"
     },
     {
-      "id": 2,
+      "recipeID": 2,
       "name": "Vegetarian Stir-Fry",
       "description": "Colorful and nutritious stir-fried vegetables",
       "ingredients": [
@@ -45,7 +45,7 @@
       "imageUrl": "https://i.pinimg.com/564x/10/16/4f/10164fc93a89769ca8408d4455443c8d.jpg"
     },
     {
-      "id": 3,
+      "recipeID": 3,
       "name": "Mango Smoothie",
       "description": "Refreshing mango smoothie for a tropical treat",
       "ingredients": [
@@ -63,7 +63,7 @@
       "imageUrl": "https://i.pinimg.com/736x/8b/f4/3a/8bf43ae9833cace8a625cc912d1dd0ff.jpg"
     },
     {
-      "id": 4,
+      "recipeID": 4,
       "name": "Caprese Salad",
       "description": "Simple and elegant salad with tomatoes, mozzarella, and basil",
       "ingredients": [
@@ -84,7 +84,7 @@
       "imageUrl": "https://i.pinimg.com/736x/f6/5b/5d/f65b5d12e8044a2f4bce99869d5f2dc5.jpg"
     },
     {
-      "id": 5,
+      "recipeID": 5,
       "name": "Chocolate Chip Cookies",
       "description": "Homemade cookies with gooey chocolate chips",
       "ingredients": [
@@ -108,7 +108,7 @@
       ],
       "imageUrl": "https://i.pinimg.com/564x/d0/7c/d3/d07cd352b34a949704aca0902c6e8d01.jpg"
     },
-    {"id": 6,
+    {"recipeID": 6,
       "name": "Chicken Alfredo Pasta",
       "description": "Creamy Alfredo pasta with tender chicken pieces.",
       "ingredients": [
@@ -133,7 +133,7 @@
       "imageUrl": "https://i.pinimg.com/736x/de/e8/df/dee8dfb89f5c84bb7b82685ce3407945.jpg"
     },
     {
-      "id": 7,
+      "recipeID": 7,
       "name": "Grilled Chicken Caesar Salad",
       "description": "A classic Caesar salad with grilled chicken for a hearty meal.",
       "ingredients": [
@@ -174,7 +174,7 @@
       "imageUrl": "https://i.pinimg.com/564x/07/b3/fa/07b3fa5f80454a92f323140a4504ad23.jpg"
     },
     {
-      "id": 8,
+      "recipeID": 8,
       "name": "Spaghetti Bolognese",
       "description": "Classic Italian spaghetti with rich and flavorful Bolognese sauce.",
       "ingredients": [
@@ -197,7 +197,7 @@
       "imageUrl": "https://i.pinimg.com/564x/00/22/b9/0022b9ae4cff08e1cdfd6eecc739107a.jpg"
     },
     {
-      "id": 9,
+      "recipeID": 9,
       "name": "Greek Salad with Lemon Vinaigrette",
       "description": "A refreshing Greek salad with a zesty lemon dressing.",
       "ingredients": [

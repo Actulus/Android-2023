@@ -1,7 +1,24 @@
 package com.tasty.recipesapp.ui.recipe.viewmodel
 
-import com.tasty.recipesapp.repository.recipe.RecipeRepository
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.tasty.recipesapp.repository.recipe.model.RecipeRepository
+import com.tasty.recipesapp.repository.recipe.model.RecipeModel
 
-class RecipeDetailViewModel{
-    private val repository = RecipeRepository
+class RecipeDetailViewModel: ViewModel() {
+    private val TAG = RecipeDetailViewModel::class.java.canonicalName
+    var recipe: MutableLiveData<RecipeModel> = MutableLiveData()
+
+    fun fetchRecipeData(recipeID: Long) {
+        Log.d(TAG, "fetchRecipeData")
+        Log.d(TAG, "RecipeID: $recipeID")
+        val recipe = RecipeRepository.getRecipe(recipeID)
+        if (recipe == null) {
+            Log.e(TAG, "Recipe is null.")
+        } else {
+            Log.d(TAG, "Recipe: $recipe")
+            this.recipe.value = recipe
+        }
+    }
 }

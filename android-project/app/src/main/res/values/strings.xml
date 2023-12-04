@@ -9,4 +9,5 @@
     <string name="dashboardFragment">Home</string>
     <string name="profileFragment">Profile</string>
     <string name="recipesFragment">Recipes</string>
+    <string name="the_image_of_the_recipe">The image of the recipe</string>
 </resources>

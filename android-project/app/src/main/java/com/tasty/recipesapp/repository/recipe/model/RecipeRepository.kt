@@ -1,38 +1,33 @@
-package com.tasty.recipesapp.repository.recipe
+package com.tasty.recipesapp.repository.recipe.model
 
 import android.content.Context
 import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
-import com.google.gson.reflect.TypeToken
-import com.tasty.recipesapp.repository.recipe.model.RecipeDTO
-import com.tasty.recipesapp.repository.recipe.model.RecipeModel
-import com.tasty.recipesapp.repository.recipe.model.RecipesDTO
-import com.tasty.recipesapp.repository.recipe.model.toModel
-import com.tasty.recipesapp.ui.recipe.viewmodel.RecipeListViewModel
 import java.io.IOException
 
 object RecipeRepository {
     private val TAG: String? = RecipeRepository::class.java.canonicalName
-    /*private var recipeList = RecipeListViewModel*/
+    private var recipeList: List<RecipeModel> = emptyList()
 
     fun getRecipes(context: Context): List<RecipeModel> {
-        lateinit var jsonString: String
+        var jsonString: String = ""
 
         try {
             val assetManager = context.assets
             val files = assetManager.list("") // Lists files/directories in the assets folder
             Log.d(TAG, "List of files in assets: ${files?.joinToString()}")
 
-            if (files != null && files.contains("new_recipes.json")) {
+            return if (files != null && files.contains("new_recipes.json")) {
                 // File exists, proceed with reading
                 jsonString = assetManager.open("new_recipes.json").bufferedReader().use { it.readText() }
                 val gson = Gson()
                 val recipesResponse: RecipesDTO = gson.fromJson(jsonString, RecipesDTO::class.java)
-                return recipesResponse.results.map { it.toModel() }
+                Log.d(TAG, "RecipesDTO: $recipesResponse")
+                recipesResponse.results.map { it.toModel() }
             } else {
                 Log.e(TAG, "File 'new_recipes.json' not found in assets folder.")
-                return emptyList()
+                emptyList()
             }
         } catch (e: JsonSyntaxException) {
             Log.e(TAG, "Error parsing JSON: $e")
@@ -42,9 +37,32 @@ object RecipeRepository {
             Log.e(TAG, "Unknown error: $e")
         }
 
+        Log.d(TAG, "JSON String: $jsonString")
         val recipesResponse: RecipesDTO = Gson().fromJson(jsonString, RecipesDTO::class.java)
-        return recipesResponse.results.map { it.toModel() }
-        /*return emptyList()*/
+        Log.d(TAG, "RecipesDTO: $recipesResponse")
+        this.recipeList = recipesResponse.results.map { it.toModel() }
+        Log.d(TAG, "RecipeList0: ${recipeList.size}")
+
+        if (this.recipeList.isEmpty()) {
+            Log.e(TAG, "RecipeList is empty.")
+        } else {
+            Log.d(TAG, "RecipeList: $recipeList")
+        }
+        Log.d(TAG, "RecipeList1: ${this.recipeList.size}")
+//        recipesResponse.results.map { it.toModel() }
+        return this.recipeList
+    }
+
+    fun getRecipe(recipeID: Long): RecipeModel? {
+        Log.d(TAG, "Get RecipeID: $recipeID")
+        Log.d(TAG, "RecipeList2: ${recipeList.size}")
+        val recipe = recipeList.find { it.recipeID == recipeID }
+        if (recipe == null) {
+            Log.e(TAG, "Recipe is null.")
+        } else {
+            Log.d(TAG, "Recipe: $recipe")
+        }
+        return recipe
     }
 
 }
