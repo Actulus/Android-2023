@@ -28,7 +28,3 @@ fun RecipeDTO.toModel() = RecipeModel (
         instructions = this.instructions,
         imageUrl = this.imageUrl
 )
-
-/*fun List<RecipeDTO>.toModelList(): List<RecipeModel> = this.map { it.toModel() }*/
-
-

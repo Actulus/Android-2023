@@ -48,16 +48,12 @@ class RecipesListAdapter(
         }
 
         fun bind(recipe: RecipeModel) {
-            with(binding) {
-                Log.d("RecipesListAdapter", "Recipe: $recipe")
-                recipeName.text = recipe.name
-                recipeDescription.text = recipe.description
-                // bind image with coil
-                recipe.imageUrl?.let {
-                    recipeImage.load(it) {
-                        crossfade(true) // Optional: Enable crossfade for smooth image transitions
-                        placeholder(R.drawable.ic_launcher_background) // Optional: Set a placeholder image while loading
-                    }
+            binding.recipeName.text = recipe.name
+            binding.recipeDescription.text = recipe.description
+            recipe.imageUrl?.let {
+                binding.recipeImage.load(it) {
+                    crossfade(true)
+                    placeholder(R.drawable.ic_launcher_background)
                 }
             }
         }

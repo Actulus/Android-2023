@@ -45,11 +45,9 @@ class RecipeDetailFragment : Fragment(R.layout.fragment_recipe_detail) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val recipeID = arguments?.getLong(ARG_RECIPE_ID)
-        Log.d(TAG, "RecipeDetailCreated");
+        Log.d(TAG, "Recipe ID: $recipeID")
 
-//        val viewModel: RecipeDetailViewModel = ViewModelProvider(this)[RecipeDetailViewModel::class.java]
-        val viewModel: RecipeDetailViewModel by viewModels()
-
+        val viewModel = ViewModelProvider(this)[RecipeDetailViewModel::class.java]
         recipeID?.let {
             viewModel.fetchRecipeData(it)
         }

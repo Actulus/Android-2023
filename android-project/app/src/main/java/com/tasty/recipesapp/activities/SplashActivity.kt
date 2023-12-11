@@ -16,7 +16,7 @@ class SplashActivity: AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+//        setContentView(R.layout.activity_splash)
         Log.d(TAG, "SplashActivity onCreate() called.")
         val binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -28,8 +28,8 @@ class SplashActivity: AppCompatActivity() {
         // Navigate to MainActivity after the delay
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)
-            finish() },
-            SPLASH_TIME_OUT)
+            finish()
+            }, SPLASH_TIME_OUT)
     }
 
     override fun onStart() {

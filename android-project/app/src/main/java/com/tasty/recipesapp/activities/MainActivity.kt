@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNavigation.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener { item ->
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.dashboardFragment -> {
                     findNavController(R.id.nav_host_fragment).navigate(R.id.dashboardFragment)
@@ -39,9 +39,12 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
-                else -> false
+                else -> {
+                    findNavController(R.id.nav_host_fragment).navigate(R.id.dashboardFragment)
+                    return@setOnItemSelectedListener true
+                }
             }
-        })
+        }
     }
 
     override fun onStart() {

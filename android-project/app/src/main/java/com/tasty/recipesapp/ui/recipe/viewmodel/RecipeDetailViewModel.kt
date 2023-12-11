@@ -11,8 +11,6 @@ class RecipeDetailViewModel: ViewModel() {
     var recipe: MutableLiveData<RecipeModel> = MutableLiveData()
 
     fun fetchRecipeData(recipeID: Long) {
-        Log.d(TAG, "fetchRecipeData")
-        Log.d(TAG, "RecipeID: $recipeID")
         val recipe = RecipeRepository.getRecipe(recipeID)
         if (recipe == null) {
             Log.e(TAG, "Recipe is null.")

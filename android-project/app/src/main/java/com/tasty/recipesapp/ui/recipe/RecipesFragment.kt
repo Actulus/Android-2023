@@ -19,32 +19,28 @@ import com.tasty.recipesapp.repository.recipe.model.RecipeModel
 import com.tasty.recipesapp.ui.recipe.viewmodel.RecipeListViewModel
 import com.tasty.recipesapp.ui.recipe.adapter.RecipesListAdapter
 
-class RecipesFragment : Fragment() {
-    companion object {
-        private val TAG: String? = RecipeRepository::class.java.canonicalName
-//        const val BUNDLE_EXTRA_SELECTED_RECIPE_ID = "BUNDLE_EXTRA_SELECTED_RECIPE_ID"
-    }
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+private val TAG: String? = RecipeRepository::class.java.canonicalName
 
-    private lateinit var binding: FragmentRecipesBinding
-    private lateinit var recipesAdapter: RecipesListAdapter
+class RecipesFragment : Fragment() {
+
+    private var param1: String? = null
+    private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /*arguments?.let {
-            val recipeID = it.getInt(BUNDLE_EXTRA_SELECTED_RECIPE_ID)
-        }*/
+        arguments?.let {
+            param1 = it.getString(ARG_PARAM1)
+            param2 = it.getString(ARG_PARAM2)
+        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentRecipesBinding.inflate(inflater, container, false)
-        initRecyclerView()
-
-//        return inflater.inflate(R.layout.fragment_recipes, container, false)
-        return binding.root
+        return inflater.inflate(R.layout.fragment_recipes, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,7 +52,7 @@ class RecipesFragment : Fragment() {
             viewModel.fetchRecipeData(it)
         }
 
-        viewModel.recipeList.observe(viewLifecycleOwner) { recipes ->
+        viewModel.recipesList.observe(viewLifecycleOwner) { recipes ->
             val adapter = RecipesListAdapter(recipes, requireContext(), onItemClickListener = {
                     navigateToRecipeDetail(it)
             })
@@ -64,21 +60,6 @@ class RecipesFragment : Fragment() {
             recyclerView.adapter = adapter
             recyclerView.layoutManager = LinearLayoutManager(context)
         }
-    }
-
-    private fun initRecyclerView() {
-        recipesAdapter = RecipesListAdapter(listOf(), requireContext(), onItemClickListener = {
-                recipe -> navigateToRecipeDetail(recipe)
-        })
-
-        binding.recipesRecyclerView.adapter = recipesAdapter
-        binding.recipesRecyclerView.layoutManager = LinearLayoutManager(context)
-        binding.recipesRecyclerView.addItemDecoration(
-            DividerItemDecoration(
-                context,
-                DividerItemDecoration.VERTICAL
-            )
-        )
     }
 
     private fun navigateToRecipeDetail(recipe: RecipeModel){
