@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.358"
-        app:srcCompat="@drawable/round_logo" />
+        app:srcCompat="@drawable/cat_chef_logo_rounded" />
 
     <TextView
         android:id="@+id/appName"

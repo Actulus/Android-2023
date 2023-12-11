@@ -71,8 +71,18 @@ class RecipeDetailFragment : Fragment(R.layout.fragment_recipe_detail) {
         recipeNameTextView.text = recipe.name
         recipeDescriptionTextView.text = recipe.description
 
-        recipeIngredientsTextView.text = recipe.ingredients.joinToString(separator = "\n")
-        recipeStepsTextView.text = recipe.instructions.joinToString(separator = "\n")
+        recipeIngredientsTextView.text = buildString {
+            for (ingredient in recipe.ingredients) {
+                append("- ${ingredient.name}: ${ingredient.quantity} ${ingredient.unit}")
+            }
+        }
+
+        recipeStepsTextView.text = buildString {
+            for (instruction in recipe.instructions){
+                append("${instruction}\n")
+            }
+        }
+
         recipe.imageUrl?.let {
             recipeImageUrlImageView.load(it) {
                 crossfade(true) // Optional: Enable crossfade for smooth image transitions

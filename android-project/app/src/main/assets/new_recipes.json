@@ -1,5 +1,5 @@
 {
-  "count": 9,
+  "count": 10,
   "results": [
     {
       "recipeID": 1,
@@ -219,7 +219,30 @@
         "Sprinkle fresh oregano on top. Serve immediately for a taste of the Mediterranean."
       ],
       "imageUrl": "https://i.pinimg.com/564x/07/2d/ac/072dacc8b64d048d4fb80bdeb3cbff25.jpg"
+    },
+    {
+        "recipeID": 10,
+        "name": "Chicken Noodle Soup",
+        "description": "A comforting bowl of chicken noodle soup for a cold day.",
+        "ingredients": [
+            {"name": "Chicken breasts", "quantity": 2.0, "unit": "boneless, skinless"},
+            {"name": "Carrots", "quantity": 2.0, "unit": "medium, sliced"},
+            {"name": "Celery stalks", "quantity": 2.0, "unit": "sliced"},
+            {"name": "Onion", "quantity": 1.0, "unit": "medium, diced"},
+            {"name": "Garlic", "quantity": 2.0, "unit": "cloves, minced"},
+            {"name": "Chicken broth", "quantity": 8.0, "unit": "cups"},
+            {"name": "Egg noodles", "quantity": 4.0, "unit": "oz"},
+            {"name": "Bay leaf", "quantity": 1.0, "unit": "whole"},
+            {"name": "Salt and black pepper", "quantity": null, "unit": "to taste"}
+        ],
+        "instructions": [
+            "In a large pot, combine chicken breasts, carrots, celery, onion, garlic, chicken broth, and bay leaf.",
+            "Bring to a boil over high heat. Reduce heat to low and simmer for 20-25 minutes.",
+            "Remove chicken breasts and shred with two forks. Return shredded chicken to the pot.",
+            "Add egg noodles and cook for 8-10 minutes or until tender.",
+            "Season with salt and black pepper. Serve hot for a comforting meal."
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/0a/5f/64/0a5f64de2183d53305468e0bd1067ca4.jpg"
     }
-
   ]
 }
