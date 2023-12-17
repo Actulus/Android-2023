@@ -10,8 +10,10 @@ import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.tasty.recipesapp.R
 import com.tasty.recipesapp.databinding.FragmentRecipesBinding
 import com.tasty.recipesapp.repository.recipe.model.RecipeRepository
@@ -59,14 +61,50 @@ class RecipesFragment : Fragment() {
             val recyclerView = view.findViewById<RecyclerView>(R.id.recipes_recycler_view)
             recyclerView.adapter = adapter
             recyclerView.layoutManager = LinearLayoutManager(context)
+
+            val itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
+                0, ItemTouchHelper.RIGHT
+            ){
+                override fun onMove(
+                    recyclerView: RecyclerView,
+                    viewHolder: RecyclerView.ViewHolder,
+                    target: RecyclerView.ViewHolder
+                ): Boolean {
+                    // Not used
+                    return false
+                }
+
+                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                    val deletedRecipe = recipes[viewHolder.adapterPosition]
+                    showDeleteConfirmationDialog(deletedRecipe, viewModel)
+                }
+            })
+
+            itemTouchHelper.attachToRecyclerView(recyclerView)
         }
     }
 
-    private fun navigateToRecipeDetail(recipe: RecipeModel){
+    private fun navigateToRecipeDetail(recipe: RecipeModel) {
         Log.d(TAG, "navigateToRecipeDetail: $recipe")
         findNavController().navigate(
             R.id.action_recipesFragment_to_recipeDetailFragment,
             bundleOf("recipeID" to recipe.recipeID)
         )
+    }
+
+    private fun showDeleteConfirmationDialog(deletedRecipe: RecipeModel, viewModel: RecipeListViewModel) {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Delete recipe")
+            .setMessage("Are you sure you want to delete ${deletedRecipe.name}?")
+            .setPositiveButton("Delete") { _, _ ->
+                viewModel.deleteRecipe(deletedRecipe)
+            }
+            .setNegativeButton("Cancel") { dialog, _ ->
+                // User cancelled the dialog
+                dialog?.dismiss()
+                // Refresh recipes list
+                viewModel.fetchRecipeData(requireContext())
+            }
+            .show()
     }
 }

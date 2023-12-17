@@ -17,6 +17,17 @@ class RecipeListViewModel: ViewModel() {
     val recipesList: MutableLiveData<List<RecipeModel>> = MutableLiveData()
 
     fun fetchRecipeData(context: Context){
-        recipesList.value = repository.getRecipes(context = context)
+        viewModelScope.launch { recipesList.value = repository.getRecipes(context) }
+    }
+
+    fun deleteRecipe(deletedRecipe: RecipeModel) {
+        viewModelScope.launch {
+            val deletedSuccessfully = repository.deleteRecipe(deletedRecipe.recipeID)
+            if (deletedSuccessfully) {
+                val currentRecipes = recipesList.value.orEmpty().toMutableList()
+                currentRecipes.remove(deletedRecipe)
+                recipesList.value = currentRecipes
+            }
+        }
     }
 }

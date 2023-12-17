@@ -1,7 +1,7 @@
 package com.tasty.recipesapp.repository.recipe.model
 
 data class RecipeDTO(
-    val recipeID: Long,
+    val id: Long,
     val name: String,
     val description: String,
     val ingredients: List<IngredientDTO>,
@@ -21,7 +21,7 @@ fun IngredientDTO.toModel() = IngredientModel(
 )
 
 fun RecipeDTO.toModel() = RecipeModel (
-        recipeID = this.recipeID,
+        recipeID = this.id,
         name = this.name,
         description = this.description,
         ingredients = this.ingredients.map { it.toModel() },

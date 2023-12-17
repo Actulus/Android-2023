@@ -101,7 +101,8 @@
             android:id="@+id/layoutIngredients"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+            android:orientation="vertical"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/btnAddIngredient"
@@ -115,14 +116,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Recipe Instructions"/>
+            android:text="Recipe Instructions"
+            android:textColor="@color/white"/>
 
         <!-- Dynamic EditTexts for Instructions -->
         <LinearLayout
             android:id="@+id/layoutInstructions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+            android:orientation="vertical"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/btnAddInstruction"

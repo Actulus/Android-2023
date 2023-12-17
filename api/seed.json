@@ -1,0 +1,253 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Pancakes",
+    "description": "Fluffy pancakes for a delightful breakfast",
+    "ingredients": [
+      {
+        "name": "All-purpose flour",
+        "quantity": 1.5,
+        "unit": "cups"
+      },
+      {
+        "name": "Milk",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "Egg",
+        "quantity": 1.0,
+        "unit": "large"
+      },
+      {
+        "name": "Baking powder",
+        "quantity": 1.0,
+        "unit": "tablespoon"
+      },
+      {
+        "name": "Sugar",
+        "quantity": 2.0,
+        "unit": "tablespoons"
+      },
+      {
+        "name": "Salt",
+        "quantity": 0.5,
+        "unit": "teaspoon"
+      },
+      {
+        "name": "Butter",
+        "quantity": 2.0,
+        "unit": "tablespoons"
+      }
+    ],
+    "instructions": [
+      "In a bowl, mix flour, baking powder, sugar, and salt.",
+      "In another bowl, whisk together milk and egg. Pour into the dry ingredients and mix until smooth.",
+      "Heat a griddle or non-stick pan. Melt butter and ladle batter onto the griddle.",
+      "Cook until bubbles form on the surface, then flip and cook the other side until golden brown."
+    ],
+    "imageUrl": "https://i.pinimg.com/564x/29/84/2d/29842d65620c3d3ab14bc81eea9fe3ea.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Vegetarian Stir-Fry",
+    "description": "Colorful and nutritious stir-fried vegetables",
+    "ingredients": [
+      {
+        "name": "Broccoli florets",
+        "quantity": 2.0,
+        "unit": "cups"
+      },
+      {
+        "name": "Carrots",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "Bell peppers",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "Snow peas",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "Tofu",
+        "quantity": 200.0,
+        "unit": "grams"
+      },
+      {
+        "name": "Soy sauce",
+        "quantity": 2.0,
+        "unit": "tablespoons"
+      },
+      {
+        "name": "Sesame oil",
+        "quantity": 1.0,
+        "unit": "tablespoon"
+      },
+      {
+        "name": "Garlic",
+        "quantity": 2.0,
+        "unit": "cloves"
+      }
+    ],
+    "instructions": [
+      "In a wok or skillet, heat sesame oil and sauté minced garlic until fragrant.",
+      "Add tofu and stir-fry until golden brown.",
+      "Add vegetables and continue stir-frying until they are tender-crisp.",
+      "Pour in soy sauce and toss everything together. Serve hot."
+    ],
+    "imageUrl": "https://i.pinimg.com/564x/10/16/4f/10164fc93a89769ca8408d4455443c8d.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mango Smoothie",
+    "description": "Refreshing mango smoothie for a tropical treat",
+    "ingredients": [
+      {
+        "name": "Mango",
+        "quantity": 1.0,
+        "unit": "ripe, peeled, and diced"
+      },
+      {
+        "name": "Greek yogurt",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "Orange juice",
+        "quantity": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Honey",
+        "quantity": 1.0,
+        "unit": "tablespoon"
+      },
+      {
+        "name": "Ice cubes",
+        "quantity": 1.0,
+        "unit": "cup"
+      }
+    ],
+    "instructions": [
+      "In a blender, combine mango, Greek yogurt, orange juice, honey, and ice cubes.",
+      "Blend until smooth and creamy.",
+      "Pour into a glass and enjoy the tropical goodness."
+    ],
+    "imageUrl": "https://i.pinimg.com/736x/8b/f4/3a/8bf43ae9833cace8a625cc912d1dd0ff.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Caprese Salad",
+    "description": "Simple and elegant salad with tomatoes, mozzarella, and basil",
+    "ingredients": [
+      {
+        "name": "Tomatoes",
+        "quantity": 4.0,
+        "unit": "medium, sliced"
+      },
+      {
+        "name": "Fresh mozzarella",
+        "quantity": 200.0,
+        "unit": "grams, sliced"
+      },
+      {
+        "name": "Fresh basil leaves",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "Balsamic glaze",
+        "quantity": 2.0,
+        "unit": "tablespoons"
+      },
+      {
+        "name": "Olive oil",
+        "quantity": 1.0,
+        "unit": "tablespoon"
+      },
+      {
+        "name": "Salt",
+        "quantity": 0.5,
+        "unit": "teaspoon"
+      },
+      {
+        "name": "Black pepper",
+        "quantity": 0.5,
+        "unit": "teaspoon"
+      }
+    ],
+    "instructions": [
+      "Arrange tomato and mozzarella slices on a serving platter.",
+      "Tuck fresh basil leaves between the slices.",
+      "Drizzle with olive oil and balsamic glaze. Season with salt and black pepper.",
+      "Serve immediately for a refreshing salad."
+    ],
+    "imageUrl": "https://i.pinimg.com/736x/f6/5b/5d/f65b5d12e8044a2f4bce99869d5f2dc5.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Chocolate Chip Cookies",
+    "description": "Homemade cookies with gooey chocolate chips",
+    "ingredients": [
+      {
+        "name": "All-purpose flour",
+        "quantity": 2.0,
+        "unit": "cups"
+      },
+      {
+        "name": "Butter",
+        "quantity": 1.0,
+        "unit": "cup, softened"
+      },
+      {
+        "name": "Brown sugar",
+        "quantity": 1.0,
+        "unit": "cup"
+      },
+      {
+        "name": "Granulated sugar",
+        "quantity": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Eggs",
+        "quantity": 2.0,
+        "unit": "large"
+      },
+      {
+        "name": "Vanilla extract",
+        "quantity": 1.0,
+        "unit": "teaspoon"
+      },
+      {
+        "name": "Baking soda",
+        "quantity": 1.0,
+        "unit": "teaspoon"
+      },
+      {
+        "name": "Salt",
+        "quantity": 0.5,
+        "unit": "teaspoon"
+      },
+      {
+        "name": "Chocolate chips",
+        "quantity": 1.0,
+        "unit": "cup"
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 350°F (175°C).",
+      "In a bowl, cream together butter, brown sugar, and granulated sugar until smooth.",
+      "Beat in eggs one at a time, then stir in vanilla extract.",
+      "In a separate bowl, combine flour, baking soda, and salt. Gradually add to the wet ingredients.",
+      "Fold in chocolate chips. Drop rounded tablespoons onto ungreased baking sheets.",
+      "Bake for 10-12 minutes or until edges are golden brown. Cool on wire racks."
+    ],
+    "imageUrl": "https://i.pinimg.com/564x/d0/7c/d3/d07cd352b34a949704aca0902c6e8d01.jpg"
+  }
+]

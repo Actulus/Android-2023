@@ -62,4 +62,11 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     //coil
     implementation("io.coil-kt:coil:2.5.0")
+    // Room dependencies
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 }

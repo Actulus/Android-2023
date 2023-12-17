@@ -12,6 +12,7 @@
             android:label="@string/app_name"
             android:roundIcon="@drawable/round_logo"
             android:supportsRtl="false"
+            android:usesCleartextTraffic="true"
             android:theme="@style/Theme.RecipesApp"
             tools:targetApi="31">
         <activity

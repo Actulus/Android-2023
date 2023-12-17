@@ -66,6 +66,7 @@ class RecipeDetailFragment : Fragment(R.layout.fragment_recipe_detail) {
         val recipeImageUrlImageView: ImageView = requireView().findViewById(R.id.recipeImage)
 
         recipeNameTextView.text = recipe.name
+
         recipeDescriptionTextView.text = recipe.description
 
         recipeIngredientsTextView.text = buildString {
