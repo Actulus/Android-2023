@@ -29,6 +29,16 @@ class DashboardFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_dashboard, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        if (view.findViewById<View>(R.id.welcomeButton) != null) {
+            view.findViewById<View>(R.id.welcomeButton).setOnClickListener {
+                val bottomNavigationView = activity?.findViewById<View>(R.id.bottom_navigation)
+                bottomNavigationView?.findViewById<View>(R.id.recipesFragment)?.performClick()
+            }
+        }
+    }
+
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =

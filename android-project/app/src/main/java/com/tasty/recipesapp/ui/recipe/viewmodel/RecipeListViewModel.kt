@@ -1,13 +1,11 @@
 package com.tasty.recipesapp.ui.recipe.viewmodel
 
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tasty.recipesapp.repository.recipe.model.RecipeModel
 import com.tasty.recipesapp.repository.recipe.model.RecipeRepository
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class RecipeListViewModel: ViewModel() {
@@ -28,6 +26,12 @@ class RecipeListViewModel: ViewModel() {
                 currentRecipes.remove(deletedRecipe)
                 recipesList.value = currentRecipes
             }
+        }
+    }
+
+    fun searchRecipe(query: String?) {
+        viewModelScope.launch {
+            recipesList.value = repository.searchRecipe(query)
         }
     }
 }

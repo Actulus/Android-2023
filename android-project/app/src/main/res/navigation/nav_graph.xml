@@ -58,6 +58,9 @@
         <action
             android:id="@+id/action_recipesFragment_to_recipeDetailFragment"
             app:destination="@id/recipeDetailFragment" />
+        <action
+            android:id="@+id/action_recipesFragment_to_editRecipeFragment"
+            app:destination="@id/editRecipeFragment" />
     </fragment>
     <fragment
         android:id="@+id/recipeFormFragment"
@@ -70,5 +73,13 @@
         <action
             android:id="@+id/action_recipeFormFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editRecipeFragment"
+        android:name="com.tasty.recipesapp.ui.recipe.EditRecipeFragment"
+        android:label="EditRecipeFragment" >
+        <action
+            android:id="@+id/action_editRecipeFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
     </fragment>
 </navigation>

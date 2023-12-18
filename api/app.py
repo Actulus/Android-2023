@@ -168,7 +168,12 @@ def update_recipe(recipe_id):
         db.session.add(instruction)
 
     db.session.commit()
-    return jsonify({"message": "Recipe updated successfully"})
+    # return jsonify({"message": "Recipe updated successfully"})
+    edited_recipe_id = recipe.id
+
+    return jsonify(
+        {"message": "Recipe updated successfully", "recipe_id": edited_recipe_id}
+    )
 
 
 # Delete a recipe

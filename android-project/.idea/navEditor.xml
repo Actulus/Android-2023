@@ -34,6 +34,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="editRecipeFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="706" />
+                            <option name="y" value="-609" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="mainActivity">
                     <value>
                       <LayoutPositions>
@@ -51,8 +63,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="708" />
-                            <option name="y" value="37" />
+                            <option name="x" value="641" />
+                            <option name="y" value="304" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -77,9 +89,23 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="906" />
-                            <option name="y" value="-267" />
+                            <option name="x" value="1048" />
+                            <option name="y" value="-204" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_recipeDetailFragment_to_profileFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_recipeDetailFragment_to_recipesFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -89,12 +115,17 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="917" />
-                            <option name="y" value="37" />
+                            <option name="x" value="1132" />
+                            <option name="y" value="193" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_recipeFormFragment_to_profileFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_recipeFormFragment_to_recipeDetailFragment">
                               <value>
                                 <LayoutPositions />
@@ -110,8 +141,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="705" />
-                            <option name="y" value="-267" />
+                            <option name="x" value="707" />
+                            <option name="y" value="-202" />
                           </Point>
                         </option>
                         <option name="myPositions">

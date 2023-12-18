@@ -63,7 +63,7 @@ class RecipesFragment : Fragment() {
             recyclerView.layoutManager = LinearLayoutManager(context)
 
             val itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
-                0, ItemTouchHelper.RIGHT
+                0, ItemTouchHelper.RIGHT or ItemTouchHelper.LEFT
             ){
                 override fun onMove(
                     recyclerView: RecyclerView,
@@ -75,8 +75,18 @@ class RecipesFragment : Fragment() {
                 }
 
                 override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                    val deletedRecipe = recipes[viewHolder.adapterPosition]
-                    showDeleteConfirmationDialog(deletedRecipe, viewModel)
+                    val position = viewHolder.adapterPosition
+                    val recipe = recipes[position]
+                    when (direction) {
+                        ItemTouchHelper.RIGHT -> {
+                            showDeleteConfirmationDialog(recipe, viewModel)
+                        }
+                        ItemTouchHelper.LEFT -> {
+                            navigateToEditRecipe(recipe)
+                        }
+                    }
+                    /*val deletedRecipe = recipes[viewHolder.adapterPosition]
+                    showDeleteConfirmationDialog(deletedRecipe, viewModel)*/
                 }
             })
 
@@ -106,5 +116,13 @@ class RecipesFragment : Fragment() {
                 viewModel.fetchRecipeData(requireContext())
             }
             .show()
+    }
+
+    private fun navigateToEditRecipe(recipe: RecipeModel) {
+        Log.d(TAG, "navigateToEditRecipe: $recipe")
+        findNavController().navigate(
+            R.id.action_recipesFragment_to_editRecipeFragment,
+            bundleOf("recipeID" to recipe.recipeID)
+        )
     }
 }

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tasty.recipesapp.R
 import com.tasty.recipesapp.repository.recipe.model.RecipeModel
 import com.tasty.recipesapp.repository.recipe.model.RecipeRepository
+import com.tasty.recipesapp.repository.recipe.model.RecipeRepository.searchRecipe
 import com.tasty.recipesapp.ui.recipe.adapter.RecipesListAdapter
 import com.tasty.recipesapp.ui.recipe.viewmodel.RecipeListViewModel
 
@@ -24,6 +26,9 @@ private val TAG: String? = RecipeRepository::class.java.canonicalName
 class ProfileFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var searchView: SearchView
+    private lateinit var recipesRecyclerView: RecyclerView
+    private val viewModel by lazy { ViewModelProvider(this)[RecipeListViewModel::class.java] }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +51,7 @@ class ProfileFragment : Fragment() {
         addRecipeButton.setOnClickListener {
             navigateToNewRecipe()
         }
+        setupSearchView()
         listMyRecipes()
     }
 
@@ -58,7 +64,7 @@ class ProfileFragment : Fragment() {
     }
 
     private fun listMyRecipes() {
-        val viewModel = ViewModelProvider(this)[RecipeListViewModel::class.java]
+        /*val viewModel = ViewModelProvider(this)[RecipeListViewModel::class.java]
 
         context?.let {
             viewModel.fetchRecipeData(it)
@@ -75,7 +81,9 @@ class ProfileFragment : Fragment() {
             if (recyclerView != null) {
                 recyclerView.layoutManager = LinearLayoutManager(context)
             }
-        }
+        }*/
+
+        context?.let { viewModel.fetchRecipeData(it) }
     }
 
     private fun navigateToRecipeDetail(recipe: RecipeModel){
@@ -84,6 +92,37 @@ class ProfileFragment : Fragment() {
             R.id.action_profileFragment_to_recipeDetailFragment,
             bundleOf("recipeID" to recipe.recipeID)
         )
+    }
+
+    private fun setupSearchView() {
+        searchView = view?.findViewById(R.id.searchView)!!
+        recipesRecyclerView = view?.findViewById(R.id.recipes_recycler_view)!!
+
+        recipesRecyclerView.layoutManager = LinearLayoutManager(context)
+
+        val adapter = RecipesListAdapter(emptyList(), requireContext(), onItemClickListener = {
+            navigateToRecipeDetail(it)
+        })
+        recipesRecyclerView.adapter = adapter
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+//                searchRecipe(query)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+//                searchRecipe(newText)
+                val searchResults = RecipeRepository.searchRecipe(newText)
+                adapter.updateData(searchResults ?: emptyList())
+                return true
+            }
+        })
+
+        viewModel.recipesList.observe(viewLifecycleOwner) { recipes ->
+            adapter.updateData(recipes)
+        }
+
     }
 
     companion object {

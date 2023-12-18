@@ -3,9 +3,7 @@ package com.tasty.recipesapp.repository.recipe.model
 import android.content.Context
 import android.util.Log
 import com.google.gson.Gson
-import com.google.gson.JsonSyntaxException
 import java.io.IOException
-import com.tasty.recipesapp.repository.recipe.model.RecipesDTO
 import retrofit2.HttpException
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -14,15 +12,17 @@ import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Path
 
 object RecipeRepository {
     private val TAG: String? = RecipeRepository::class.java.canonicalName
     private var recipesList: List<RecipeModel> = emptyList()
     private val newRecipes = mutableListOf<RecipeModel>()
-    private const val BACKEND_URL = "http://192.168.213.194:5000" // Replace with your own IP
+    private const val BACKEND_URL = "http://192.168.43.194:5000" // Replace with your own IP
 
     data class SaveRecipeCreationResponse(val recipe_id: Long)
+    data class UpdateRecipeResponse(val recipe_id: Long)
 
     private interface RecipeApiService {
         @GET("recipes") // Define the endpoint for getting recipes
@@ -36,6 +36,9 @@ object RecipeRepository {
 
         @DELETE("recipes/{id}")
         suspend fun deleteRecipe(@Path("id") id: Long): Response<Unit>
+
+        @PUT("recipes/{id}")
+        suspend fun updateRecipe(@Path("id") id: Long, @Body recipe: RecipeDTO): Response<UpdateRecipeResponse>
     }
 
     private val retrofit = Retrofit.Builder()
@@ -187,6 +190,35 @@ object RecipeRepository {
         } catch (e: Exception) {
             Log.d(TAG, "Error while deleting recipe: $e")
             return false
+        }
+    }
+
+    suspend fun updateRecipe(recipe: RecipeModel): Long? {
+        try {
+            // Convert domain model into DTO
+            val recipeDTO = recipe.toDTO()
+
+            // Make the PUT request using Retrofit
+            val response = recipeApiService.updateRecipe(recipe.recipeID, recipeDTO)
+
+            // Check if the request was successful
+            if (response.isSuccessful) {
+                return response.body()?.recipe_id
+            } else {
+                Log.d(TAG, "Error while updating recipe: ${response.errorBody()?.string()}")
+                return null
+            }
+        } catch (e: Exception) {
+            Log.d(TAG, "Error while updating recipe: $e")
+            return null
+        }
+    }
+
+    fun searchRecipe(query: String?): List<RecipeModel>? {
+        return if (query.isNullOrBlank()) {
+            recipesList
+        } else {
+            recipesList.filter { it.name.contains(query, ignoreCase = true) }
         }
     }
 }

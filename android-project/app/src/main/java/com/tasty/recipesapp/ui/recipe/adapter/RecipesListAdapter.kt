@@ -37,6 +37,13 @@ class RecipesListAdapter(
         return recipesList.size
     }
 
+    fun updateData(recipes: List<RecipeModel>?) {
+        recipes?.let {
+            recipesList = it
+            notifyDataSetChanged()
+        }
+    }
+
     inner class RecipeItemViewHolder(private val binding: RecipeListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         init {
